@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<style type="text/css">
+	
+	#item{
+		width:100px;
+		height:100px;
+		background-color:green;
+		position:absolute;
+		animation-name:locomote;
+		animation-duration:5s;
+		animation-iteration-count:infinite;
+	}
+	@keyframes locomote{
+		0%{
+			left:0px;
+			top:0px;
+		}
+
+		100%{
+			left:300px;
+			top:300px;
+		}
+	}
+</style>
+
+
+
+
+</head>
+<body>
+<div id=item>
+	
+
+</div>
+
+<script type="text/javascript">
+
+	let x; 
+	let y;
+	function coordinate(event){
+		x = event.clientX;
+		y = event.clientY;
+
+	}
+	setTimeout(coordinate, 5000)
+	console.log(x, y)
+
+        
+
+
+</script>
+
+
+</body>
+</html>

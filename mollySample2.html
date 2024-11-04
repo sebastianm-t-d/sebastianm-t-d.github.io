@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+		#background{
+			width:100%;
+			height:3000px;
+			background-color:lightblue;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="background"></div>
+
+	<script type="text/javascript">
+
+		// psuedocode:
+		//Update "before" scroll value at start of program
+		//loop:[update "after" scroll value
+		//wait some amount of time
+		//update "before"
+		//compare before and after
+		//apply information]
+
+
+		
+		// let before = window.scrollY;
+
+		// window.addEventListener("scroll", function(){
+		// 	let after = window.scrollY;
+
+		// 	setTimeout( , 500)
+
+		// 	if(after >= before) { 
+		// 			//faces go apart//
+		// 	}
+
+		// 	if(after =< before) { 
+		// 			//faces go together//
+		// 	}
+
+
+		// })
+
+		let list = [];
+		let before;
+		let after;
+
+
+		 window.addEventListener("scroll", function(){
+
+		 before = window.scrollY
+
+		 function afterBefore (){
+		 	after = window.scrollY
+		 }
+
+		 setTimeout(afterBefore, 10)
+
+		 console.log(before, after)
+		
+		 if (before > after) {
+		 	console.log("hello")
+		 }
+		 if (before < after) {
+		 	console.log("goodbye")
+		 }
+		// let x = window.scrollY
+
+		// list.push(x)
+		// console.log(list)
+
+	})
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style type="text/css">
+	
+
+
+	#button{
+		width:100px;
+		height:50px;
+		background-color:red;
+	}
+
+	body{
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+
+	/*#tyler{
+		width:600px;
+		height:600px;
+	}
+	#frank{
+		width:600px;
+		height:600px;
+	}
+	#qtip{
+		width:600px;
+		height:600px;
+	}
+	#sade{
+		width:600px;
+		height:600px;
+	}
+	#carti{
+		width:600px;
+		height:600px;
+	}*/
+
+</style>
+</head>
+<body>
+
+<div id="button"></div>
+<div id="tyler"></div>
+<div id="frank"></div>
+<div id="qtip"></div>
+<div id="sade"></div>
+<div id="carti"></div>
+
+<script type="text/javascript">
+	
+	
+
+	
+	let button = document.getElementById("button");
+
+
+	button.addEventListener("click", function(){
+		let name = ""
+		let flight = Math.floor(Math.random() * 7);
+		document.body.style.backgroundImage = "url("+flight+".jpg)";
+		console.log(flight);
+		console.log(document.body.style.backgroundImage)
+		
+		if (flight = 0) {
+			let name = "frank"
+		}
+
+		if (flight = 1) {
+			let name = "sade adu"
+		}
+
+		if (flight = 2) {
+			let name = "KUNG FU KENNY"
+		}
+
+		if (flight = 3) {
+			let name = "Badu"
+		}
+
+		if (flight = 4) {
+			let name = "ye"
+		}
+
+		if (flight = 5) {
+			let name = "carti"
+		}
+
+		if (flight = 6) {
+			let name = "qtip"
+		}
+
+		console.log(name);
+		window.alert( +name+ " is the G.O.A.T.")
+		
+
+		
+
+
+		//document.body.style.backgroundImage = "url("+flight+".jpg)"
+	})
+
+
+ 
+</script>
+
+
+</body>
+</html>

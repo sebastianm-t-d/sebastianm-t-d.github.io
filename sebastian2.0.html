@@ -5,10 +5,13 @@
 
 	<style type="text/css">
 		
+		body{
+			margin:0px;
+		}
 		#skull{
 			left:300px;
-			top:500px;
-			position:absolute;
+			top:300px;
+			position:fixed;
 			width:100px;
 			height:100px;
 			background-color:purple;
@@ -19,12 +22,12 @@
 		.halves{
 			background-size:contain;
 			background-repeat: no-repeat;
-			position:absolute;
+			position:fixed;
 		opacity:0;
 			width:50px;
 			height:100px;
 			left:40%;
-			top:500px;
+			top:300px;
 			display:flex;
 			background-color:lightblue;
 			margin:0px;
@@ -35,12 +38,12 @@
 			background-image:url(skull3.png);
 			background-position:12px;
 			left:300px;
-			top:500px;
+			top:300px;
 		}
 
 		#skull2{
 			left:350px;
-			top:500px;
+			top:300px;
 			background-image:url(skull2.png);
 		}
 
@@ -58,32 +61,72 @@
 	<div class ="halves" id="skull2"></div>
 
 
-	<div id="skull"></div>
+	<center><div id="skull"></div></center>
 
 </div>
 
 	<script type="text/javascript">
-			skull1.style.left = "300px"
+			skull1.style.left = "300px" 
 			skull2.style.left = "349px"
-		let fred = parseInt(skull1.style.left)
-		let bob = parseInt(skull2.style.right)
+		let leftskull = parseInt(skull1.style.left) // turns position into variable string fred
+		let rightskull = parseInt(skull2.style.left) // turns position into variable string bob
 
 		window.addEventListener("scroll", function(){
 			console.log(window.scrollY)
 			if (window.scrollY>100){
-			console.log("sebastian!")
-			console.log(fred)
-			console.log(bob)
+			console.log(leftskull)
+			console.log(rightskull)
 			skull.style.opacity="0"
 			skull1.style.opacity="1"
 			skull2.style.opacity="1"
-			fred = fred-1
-			skull1.style.left = fred +"px"
-			bob = bob+1
-			skull2.style.right = bob -"px"
-
-
 			}
+			if (window.scrollY>=100){
+			// fred = fred-1
+			// skull1.style.left = fred +"px"
+			// bob = bob+1
+			// skull2.style.left = bob +"px"
+			}
+
+			})// end of function inside event listener
+
+
+		let before;
+		let after;
+
+
+		 window.addEventListener("scroll", function(){
+
+		 before = window.scrollY // setting variable every time you scroll//
+
+		 function afterBefore (){
+		 	after = window.scrollY
+		 }
+
+		 setTimeout(afterBefore, 10)
+
+		 // you run the 'afterbefore' function which sets the AFTER variable 10 ms after you set the BEFORE variable ...which is useful so you can compare them//
+
+		 console.log(before, after)
+		
+		if (before > 100 && before < 800) // if we are between two scroll values when the skulls should move
+		 if ((before - after) > 0) { //if we scroll up, then:
+		 	console.log("hello")
+		 	skull1.style.left = leftskull +"px"
+			leftskull = leftskull+(Math.abs(after - before))
+			skull2.style.left = rightskull +"px"
+			rightskull = rightskull-(Math.abs(after - before))
+			
+
+		 }
+		 // if ((before - after) < 0) {
+		 // 	console.log("goodbye")
+		 // 	skull1.style.left = leftskull +"px"
+		 // 	leftskull = leftskull+(Math.abs(after - before))
+		// 	skull2.style.left = rightskull +"px"
+		// 	rightskull = rightskull-(Math.abs(after - before))
+			
+		 	
+		 // }
 
 		})
 		
