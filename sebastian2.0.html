@@ -109,10 +109,10 @@
 		 console.log(before, after)
 		
 		if (before > 100 && before < 800) // if we are between two scroll values when the skulls should move
-		 if ((before - after) > 0) { //if we scroll up, then:
+		 if ((before - after) > 0) { //if we scroll down, then:
 		 	console.log("hello")
 		 	skull1.style.left = leftskull +"px"
-			leftskull = leftskull+(Math.abs(after - before))
+			leftskull = leftskull + (Math.abs(after - before))
 			skull2.style.left = rightskull +"px"
 			rightskull = rightskull-(Math.abs(after - before))
 			

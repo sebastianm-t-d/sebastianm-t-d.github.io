@@ -14,9 +14,12 @@
 		background-color:red;
 	}
 
-	body{
-		background-size:cover;
+	#canvas{
 		background-repeat:no-repeat;
+		background-size:contain;
+		background-repeat:no-repeat;
+		width:600px;
+		height:1000px;
 	}
 
 	/*#tyler{
@@ -44,12 +47,16 @@
 </head>
 <body>
 
+	
+
 <div id="button"></div>
-<div id="tyler"></div>
+
+<center><div id="canvas"></div></center>
+<!-- <div id="tyler"></div>
 <div id="frank"></div>
 <div id="qtip"></div>
 <div id="sade"></div>
-<div id="carti"></div>
+<div id="carti"></div> -->
 
 <script type="text/javascript">
 	
@@ -60,42 +67,46 @@
 
 
 	button.addEventListener("click", function(){
-		let name = ""
-		let flight = Math.floor(Math.random() * 7);
-		document.body.style.backgroundImage = "url("+flight+".jpg)";
+		let name;
+		let flight = Math.floor(Math.random() * 8);
+		canvas.style.backgroundImage = "url("+flight+".jpg)";
 		console.log(flight);
-		console.log(document.body.style.backgroundImage)
+		console.log(canvas.style.backgroundImage)
 		
-		if (flight = 0) {
-			let name = "frank"
+		if (flight == 0) {
+			 name = "frank"
 		}
 
-		if (flight = 1) {
-			let name = "sade adu"
+		if (flight == 1) {
+			 name = "sade adu"
 		}
 
-		if (flight = 2) {
-			let name = "KUNG FU KENNY"
+		if (flight == 2) {
+			 name = "KUNG FU KENNY"
 		}
 
-		if (flight = 3) {
-			let name = "Badu"
+		if (flight == 3) {
+			 name = "Badu"
 		}
 
-		if (flight = 4) {
-			let name = "ye"
+		if (flight == 4) {
+			 name = "ye"
 		}
 
-		if (flight = 5) {
-			let name = "carti"
+		if (flight == 5) {
+			 name = "carti"
 		}
 
-		if (flight = 6) {
-			let name = "qtip"
+		if (flight == 6) {
+			 name = "qtip"
 		}
 
+		if (flight == 7) {
+
+			name = "lauryn"
+		}
 		console.log(name);
-		window.alert( +name+ " is the G.O.A.T.")
+		window.alert(name + " is the G.O.A.T.")
 		
 
 		

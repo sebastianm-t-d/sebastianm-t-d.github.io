@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+
+	<style type="text/css">
+		
+		#apple{
+			background-color:rgb(0, 0, 150);
+			opacity:1;
+		}
+
+		#apple:hover{
+			background-color:white;
+			
+		}
+
+		#orange:hover{
+			background-color:white;
+
+		}
+		#orange{
+			background-color:rgb(0, 0, 150);	
+			opacity:1;
+
+		}
+
+		.fred{
+			color:rgb(0, 0, 150);
+			width:49%;
+			margin:0px;
+			height:100vw;
+			background-color:rgb(0,0,150);
+			background-size:contain;
+			position: relative;
+			display:inline-block;
+		}
+	</style>
+
+</head>
+<body>
+
+<a href="projects.html">
+	<div class="fred" id="projects">sdfsfdf
+		
+	</div>
+
+</a>
+ 
+ <!-- <br><br><br> -->
+
+ <a href="journal.html">
+
+ 	<div class="fred" id="journal">sdfsdf
+ 		
+ 	</div>
+
+ </a>
+
+<script type="text/javascript">
+	
+	projects.addEventListener("mouseenter", 
+	function(){
+
+		projects.innerText = "does this work?"
+		projects.style.color="white"
+	})
+
+	projects.addEventListener("mouseleave",function(){
+		projects.style.color = "rgb(0, 0, 150)"
+	})
+</script>
+
+</body>
+</html>

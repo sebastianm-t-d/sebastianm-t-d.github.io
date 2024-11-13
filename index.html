@@ -8,43 +8,93 @@
 
 	<style type="text/css">
 		
-		#apple{
-			width:500px;
-			height:500px;
-			background-color: blueviolet;
+		#header1{
+		font-size:70px;
 		}
 
-		#apple:hover{
-			background-color: orangered;
-			text-transform: orange;
-			background-image:url(https://i.scdn.co/image/ab67616d00001e027aede4855f6d0d738012e2e5);
+		#projects{
+			opacity:1;
 		}
 
-		#orange:hover{
-			background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvpQr7jRfGRZXz54j5HdGf6MDP8w5l53a3UQ&s);
-			text-transform: apple;
+
+
+		#journal{
+			opacity:1;
+
 		}
-		#orange{
-			width:500px;
-			height:500px;
-			background-color:orangered;	
+
+		.sizing{
+			width:49%;
+			height:100vw;
+			margin:0px;
+			background-size:contain;
+			position: relative;
+			display:inline-block;
+			background-color:rgb(0, 0, 150);
+			overflow: hidden; /* Prevents overflow of text */
+            vertical-align: top; /* Ensures divs align properly */
+		}
+
+		.sizing:hover{
+			background-color:rgb(0,0,130);
+			width:49%;
+			height:100vw;
+			margin:0px;
+			background-size:contain;
+			position: relative;
+			display:inline-block;
+
 		}
 	</style>
 
 </head>
 <body>
+<h1 id=header1>SEBASTIAN DAVIS WEBSITE.</h1>
+
 
 <a href="projects.html">
-	<div id="apple"></div>
+	<div class="sizing" id="projects">.
 
-	<header>apple</header>
+		
+	</div>
+
 </a>
  
- <br><br><br>
+
 
  <a href="journal.html">
- 	<div id="orange"></div>
- 	<header>orange</header>
+
+ 	<div class="sizing" id="journal">.
+
+
+ 		
+ 	</div>
+
  </a>
+
+ <script type="text/javascript">
+	
+	projects.addEventListener("mouseenter", 
+	function(){
+
+		projects.innerText = "          projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     projects     *     "
+		projects.style.color="white"
+
+	})
+
+	projects.addEventListener("mouseleave",function(){
+		projects.style.color = "rgb(0, 0, 150)"
+	})
+
+	journal.addEventListener("mouseenter",function(){
+	journal.innerText = "     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     +     journal     "
+	journal.style.color="white"
+	})
+
+	journal.addEventListener("mouseleave",function(){
+	journal.style.color = "rgb(0,0,150)"
+	})
+	
+</script>
 </body>
 </html>
