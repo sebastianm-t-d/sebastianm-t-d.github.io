@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+ <style type="text/css">
+ 	
+ 	#title{
+ 		font-size:30px;
+ 		font-family:sans-serif;
+
+ 	}
+
+ 	.time{
+ 		height:100px;
+ 		width:100px;
+ 		display:inline-block;
+		font-size:40px;
+		font-family:sans-serif;
+		margin:5px;
+
+	}
+
+
+ </style>
+
+	
+
+
+</head>
+<body>
+
+<h1 id="title">This website is a waste of time. Watch the shades of your life tick away, second by second.</h1>
+<script type="text/javascript">
+	
+	let red;
+	let green;
+	let blue;
+	
+	let anything = 0
+
+
+	function boxes(){
+		anything = anything+1
+		let box = document.createElement("div")
+		let red = Math.floor(Math.random() * 254);
+		let green = Math.floor(Math.random() * 254);
+		let blue = Math.floor(Math.random() * 254);
+		document.body.appendChild(box)
+		box.classList.add("time")
+		box.innerText = anything
+		box.style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+
+
+	}
+
+	setInterval(boxes, 1000)
+
+	
+
+</script>
+
+
+
+
+</body>
+</html>
