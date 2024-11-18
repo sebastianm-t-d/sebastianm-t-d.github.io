@@ -80,11 +80,10 @@
 			skull1.style.opacity="1"
 			skull2.style.opacity="1"
 			}
-			if (window.scrollY>=100){
-			// fred = fred-1
-			// skull1.style.left = fred +"px"
-			// bob = bob+1
-			// skull2.style.left = bob +"px"
+			if (window.scrollY<100){
+			skull.style.opacity="1"
+			skull1.style.opacity="0"
+			skull2.style.opacity="0"
 			}
 
 			})// end of function inside event listener
@@ -112,21 +111,21 @@
 		 if ((before - after) > 0) { //if we scroll down, then:
 		 	console.log("hello")
 		 	skull1.style.left = leftskull +"px"
-			leftskull = leftskull + (Math.abs(after - before))
+			leftskull = leftskull - (Math.abs(after - before))
 			skull2.style.left = rightskull +"px"
-			rightskull = rightskull-(Math.abs(after - before))
+			rightskull = rightskull+(Math.abs(after - before))
 			
 
 		 }
-		 // if ((before - after) < 0) {
-		 // 	console.log("goodbye")
-		 // 	skull1.style.left = leftskull +"px"
-		 // 	leftskull = leftskull+(Math.abs(after - before))
-		// 	skull2.style.left = rightskull +"px"
-		// 	rightskull = rightskull-(Math.abs(after - before))
+		 if ((before - after) < 0) {
+		 	console.log("goodbye")
+		 	skull1.style.left = leftskull +"px"
+		 	leftskull = leftskull+(Math.abs(after - before))
+			skull2.style.left = rightskull +"px"
+			rightskull = rightskull-(Math.abs(after - before))
 			
 		 	
-		 // }
+		 }
 
 		})
 		
