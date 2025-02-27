@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+	</title>
+
+	<style type="text/css">
+		
+		.square{
+			height:150px;
+			width:150px;
+			display:inline-block;
+			border:solid black 2px;
+		}
+
+		#handle{
+			height:150px;
+			width:50px;
+			background-color:red;
+			display:inline-block;
+			border:solid black 2px;
+		}
+
+		#scoreboard{
+			font-size:75px;
+			display:inline-block;
+			font-family:serif;
+
+		}
+		#scorey{
+			font-size:75px;
+			display:inline-block;
+			font-family:serif;
+			background-color:rgb(200,200,200);
+			font-color:rgb(0,0,255);
+		}
+		.winner{
+			font-size:30px;
+			font-family:sans-serif;
+			font-color:rgb(5,250,78);
+		}
+	</style>
+
+
+
+</head>
+<body>
+
+<div id=handle></div>
+<div id="slot1" class="square"></div>
+<div id="slot2" class="square"></div>
+<div id="slot3" class="square"></div>
+<div id="scoreboard">MONEYS:</div>
+<div id="scorey"></div>
+<div id="winnery" class="winner"></div>
+
+<script type="text/javascript">
+	window.alert("You have earned 20 shekels at your job. Using your lucky amulet, you must use the slot machine to flip this 20 dollars into 40 dubloons for beer and peanut butter to feed your baby child.")
+	let score = 20
+	scorey.innertext = score
+
+
+	
+	handle.addEventListener("click",function(){
+	var images = ["blue", "magenta", "green", "yellow", "orange", "purple", "red", "pink"]
+		let random = Math.floor(Math.random()*10)
+		let random2 = Math.floor(Math.random()*10)
+		let random3 = Math.floor(Math.random()*10)
+
+				
+
+		// if (random == random2){
+		// 	score = score + 1
+		// 	scorey.innerText = score
+		// }
+		// if (random2 == random3){
+		// 	score = score + 1
+		// 	scorey.innerText = score
+		// }
+		// if (random3 == random){
+		// 	score = score + 1
+		// 	scorey.innerText = score
+		// }
+		if (random == random2 && random2 == random3){
+			score = score + 120
+			scorey.innerText = score
+			winnerg = 100
+			winner.innerText = "you win 120 shekels!"
+			}
+			else if(random3 == random){
+			score = score + 2
+			scorey.innerText = score
+			}
+			else if(random2 == random3){
+			score = score + 2
+			scorey.innerText = score
+			}
+			else if(random == random2){
+			score = score + 2
+			scorey.innerText = score
+			}
+			else if (random != random2 && random2 != random3 && random != random3) {
+			score = score - 1
+			scorey.innerText = score
+			}
+
+			
+
+
+		slot1.style.backgroundColor = images[random]
+		slot2.style.backgroundColor = images[random2]
+		slot3.style.backgroundColor = images[random3]
+
+	})
+</script>
+
+</body>
+</html>

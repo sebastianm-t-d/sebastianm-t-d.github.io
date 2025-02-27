@@ -66,16 +66,16 @@
 </div>
 
 	<script type="text/javascript">
-			skull1.style.left = "300px" 
-			skull2.style.left = "349px"
-		let leftskull = parseInt(skull1.style.left) // turns position into variable string fred
-		let rightskull = parseInt(skull2.style.left) // turns position into variable string bob
+		skull1.style.left = "300px" 
+		skull2.style.left = "349px"
+		let proportional = ((window.scrollY) - 100)
+		let leftskull = parseInt(skull1.style.left) // turns position into variable string leftskull
+		let rightskull = parseInt(skull2.style.left) // turns position into variable string rightskull
 
 		window.addEventListener("scroll", function(){
 			console.log(window.scrollY)
-			if (window.scrollY>100){
-			console.log(leftskull)
-			console.log(rightskull)
+			if (window.scrollY>100 && window.scrollY<800){
+			
 			skull.style.opacity="0"
 			skull1.style.opacity="1"
 			skull2.style.opacity="1"
@@ -91,7 +91,7 @@
 
 		let before;
 		let after;
-		let proportional = (window.scrollY - 100)
+		
 
 
 		 window.addEventListener("scroll", function(){
@@ -106,27 +106,25 @@
 
 		 // you run the 'afterbefore' function which sets the AFTER variable 10 ms after you set the BEFORE variable ...which is useful so you can compare them//
 
-		 console.log(before, after)
 		
-		if (before > 100 && before < 800) // if we are between two scroll values when the skulls should move
-		 if ((before - after) > 0) { //if we scroll down, then:
-		 	console.log("hello")
+		if (before > 100 && before < 800){ // if we are between two scroll values 
 		 	skull1.style.left = leftskull +"px"
-			leftskull = leftskull - (Math.abs(after - before))
 			skull2.style.left = rightskull +"px"
-			rightskull = rightskull+(Math.abs(after - before))
+			// leftskull = leftskull - (Math.abs(after - before))
+			// rightskull = rightskull+(Math.abs(after - before))
+			leftskull = leftskull + (proportional*0.05)
+			rightskull = rightskull - (proportional*0.05)
 			
 
 		 }
-		 if ((before - after) < 0) {
-		 	console.log("goodbye")
-		 	skull1.style.left = leftskull +"px"
-		 	leftskull = leftskull+(Math.abs(after - before))
-			skull2.style.left = rightskull +"px"
-			rightskull = rightskull-(Math.abs(after - before))
-			
+		 // if ((before - after) < 0) {
+		 // 	console.log("goodbye")
+		 // 	skull1.style.left = leftskull +"px"
+		 // 	skull2.style.left = rightskull +"px"
+		 // 	leftskull = leftskull - (proportional*0.05)
+		 // 	rightskull = rightskull + (proportional*0.05)
 		 	
-		 }
+		 // }
 
 		})
 		

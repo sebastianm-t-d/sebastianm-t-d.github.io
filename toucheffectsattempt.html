@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grid of Red Dots</title>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #background {
+            background-color: black;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .dot {
+        	display: inline-block;
+            background-color: rgb(150, 0, 0);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        body{
+        	background-color:black;
+        	margin:0px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="background"></div> -->
+
+    <script type="text/javascript">
+        function makeParticle() {
+            let particle = document.createElement("div");
+            particle.classList.add("dot");
+            // document.getElementById("background").appendChild(particle);
+             document.body.appendChild(particle);
+        }
+
+        for (let i = 0; i < 600; i++) {
+            makeParticle();
+        }
+    </script>
+</body>
+</html>
